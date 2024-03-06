@@ -1,0 +1,28 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "8e5bea8394b2d39246d016a511b81122"
+name = "checkout-extension"
+application_url = "https://structures-sun-status-forgotten.trycloudflare.com"
+embedded = true
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "teststore-brimo.myshopify.com"
+include_config_on_deploy = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_products"
+
+[auth]
+redirect_urls = [
+  "https://structures-sun-status-forgotten.trycloudflare.com/auth/callback",
+  "https://structures-sun-status-forgotten.trycloudflare.com/auth/shopify/callback",
+  "https://structures-sun-status-forgotten.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2024-01"
+
+[pos]
+embedded = false
